@@ -8,6 +8,21 @@
 * Angular
 * Jasmine unit tests
 
+# Set up
+Perhaps install mongo db
+npm install
+npm start
+Create user: POST http://localhost:3000/api/users
+{
+  "rfid": "666",
+  "userInfo": {
+    "firstName": "Firstname",
+    "lastName": "Lastname",
+    "email": "xxx@xxx.xx"
+  }
+}
+Visit http://localhost:3000/apps/registration/
+
 # Tutorials:
 http://code.tutsplus.com/tutorials/build-a-complete-mvc-website-with-expressjs--net-34168
 http://www.slideshare.net/huseyinbabal/complete-mvc-on-node-js-27877254
@@ -51,8 +66,8 @@ POST /api/users
 {
   "rfid": "666",
   "userInfo": {
-    "firstName": "Fredrik",
-    "lastName": "Stolpe2",
+    "firstName": "Firstname",
+    "lastName": "Lastname",
     "email": "xxx@xxx.xx"
   }
 }
