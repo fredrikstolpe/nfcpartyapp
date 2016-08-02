@@ -1,6 +1,24 @@
-<h1>Reg</h1>
-<ul>
-  <li ng-repeat="user in $ctrl.users">
-    <span>{{user.userInfo.firstName}}</span>
-  </li>
-</ul>
+<div ng-controller="formController">
+  <h1>Reg</h1>
+  <ul>
+    <li ng-repeat="user in $ctrl.users">
+      <span>{{user.userInfo.firstName}}</span>
+    </li>
+  </ul>
+  <form ng-submit="processForm()">
+    rfid:<br>
+    <input type="text" name="rfid" ng-model="formData.rfid"><br>
+    First name:<br>
+    <input type="text" name="firstName" ng-model="formData.userInfo.firstName"><br>
+    Last name:<br>
+    <input type="text" name="lastName" ng-model="formData.userInfo.lastName"><br>
+    Email:<br>
+    <input type="text" name="email" ng-model="formData.userInfo.email"><br>
+    <br>
+    <button type="submit">Submit!</button>
+  </form>
+
+  <pre>
+    {{formData}}
+  </pre>
+</div>
